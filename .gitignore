@@ -7,7 +7,9 @@
 .project
 .settings
 .springBeans
+.class
 
 build/
 dist/
 target/
+bin/
