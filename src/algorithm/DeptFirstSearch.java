@@ -1,6 +1,5 @@
 package algorithm;
 
-import datastructure.Node;
 import datastructure.Stack;
 import datastructure.TreeNode;
 
@@ -11,14 +10,31 @@ public class DeptFirstSearch {
 		Stack stk = new Stack();
 		stk.push(TreeTestCases.treeTest1());
 		
-		dfsMidLeftRight(stk);
+		//preorderDfs(stk);
+		
+		inorderDfs(TreeTestCases.treeTest1());
 	}
 
-	private static void dfsMidLeftRight(Stack stk) {
+	private static void inorderDfs(TreeNode node) {
+
+		if (node == null) {
+			return;
+		}
+		
+		if (node.left != null) {
+			inorderDfs(node.left);
+		} 
+		System.out.println(node);
+		
+		if (node.right !=  null) {
+			inorderDfs(node.right);
+		}
+	}
+
+	private static void preorderDfs(Stack stk) {
 
 		while (stk.peak() != null) {
-			Node node = stk.pop();
-			TreeNode content = (TreeNode)node.value;
+			TreeNode content = (TreeNode)stk.pop();
 			System.out.println(content);
 			
 			stk.push(content.left);

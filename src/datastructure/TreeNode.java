@@ -38,7 +38,7 @@ public class TreeNode {
 			
 			if (list.isEmpty()) break;
 			
-			Node tempNode = q.pop();
+			TreeNode tempNode = (TreeNode)q.pop();
 			
 		}
 	}

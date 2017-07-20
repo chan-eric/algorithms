@@ -49,4 +49,18 @@ public class TreeTestCases {
 		
 		return a;
 	}
+	
+	public static TreeNode treeTest2() {
+		TreeNode a = new TreeNode(5);
+		TreeNode b = new TreeNode(3);
+		TreeNode c = new TreeNode(6);
+		TreeNode d = new TreeNode(1);
+		TreeNode e = new TreeNode(4);
+		a.left=b;
+		a.right=c;
+		b.left=d;
+		b.right=e;
+		
+		return a;
+	}
 }

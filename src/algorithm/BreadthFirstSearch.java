@@ -22,8 +22,7 @@ public class BreadthFirstSearch {
 	private static void traverse(Queue q) {
 		
 		while (q.peak() != null) {
-			Node next = q.pop();
-			TreeNode node = (TreeNode)next.value;
+			TreeNode node = (TreeNode)q.pop();
 			System.out.println(node.val);
 			
 			if (node.left != null) q.insert(node.left);

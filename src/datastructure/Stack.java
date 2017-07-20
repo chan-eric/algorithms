@@ -20,11 +20,11 @@ public class Stack {
 		return top;
 	}
 	
-	public Node pop()	 {
+	public Object pop()	 {
 		if (peak() != null) {
 			Node result = top;
 			top = top.next;
-			return result;
+			return result.next;
 		}
 		
 		return null;

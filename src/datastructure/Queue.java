@@ -18,7 +18,7 @@ public class Queue {
 		}
 	}
 	
-	public Node pop(){
+	public Object pop(){
 		
 		Node node = head;
 		if (head !=null) {
@@ -28,7 +28,7 @@ public class Queue {
 			head=head.next;
 		}
 		
-		return node;
+		return node.value;
 	}
 	
 	public Node peak() {
