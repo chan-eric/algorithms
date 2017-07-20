@@ -4,13 +4,10 @@ import java.util.List;
 
 public class TreeNode {
 
+	public int val;
 	public TreeNode left;
 	public TreeNode right;
-	public int value;
-	
-	public TreeNode(int x) {
-		value=x;
-	}
+	public TreeNode(int x) { val = x; }
 	
 	
 	public static void insert(TreeNode node, int num, Queue q) {
@@ -18,8 +15,8 @@ public class TreeNode {
 		q.insert(num);
 		
 		TreeNode newNode = new TreeNode(num);
-		if (node.value==-1) {
-			node.value=num;
+		if (node.val==-1) {
+			node.val=num;
 		} else if (node.left == null) {
 			node.left = newNode;
 		} else if (node.right == null) {
