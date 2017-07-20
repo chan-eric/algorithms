@@ -1,5 +1,6 @@
 package algorithm;
 
+import datastructure.Node;
 import datastructure.Queue;
 import datastructure.TreeNode;
 
@@ -23,25 +24,36 @@ public class BreadthFirstSearch {
 		d.right=f;
 		e.left=g;
 		
+		//
+		b.right = new TreeNode(2);
+		c.left = new TreeNode(4);
+		d.left = new TreeNode(5);
+		e.right = new TreeNode(7);
+		f.left = new TreeNode(8);
+		
+		
 		//print all the nodes with breadth first search
 		
 		Queue q = new Queue();
 		q.insert(a);
 		
+		traverse(q);
 	}
 	
-	private static void printAllNodes(TreeNode node) {
-		if (node != null) {
+	private static void traverse(Queue q) {
+		
+		//Queue newQ = new Queue();
+		
+		while (q.peak() != null) {
+			Node next = q.pop();
+			TreeNode node = (TreeNode)next.value;
 			System.out.println(node.val);
+			
+			if (node.left != null) q.insert(node.left);
+			if (node.right != null) q.insert(node.right);
 		}
 		
-		if (node.left != null) {
-			System.out.println(node.left.val);
-		}
 		
-		if (node.left != null) {
-			System.out.println(node.left.val);
-		}
 	}
 
 }

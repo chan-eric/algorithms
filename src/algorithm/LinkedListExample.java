@@ -22,7 +22,7 @@ public class LinkedListExample {
 	    return head.next;
 	}
 
-	public static class Node {
+	private static class Node {
 	    int val;
 	    Node next;
 	    

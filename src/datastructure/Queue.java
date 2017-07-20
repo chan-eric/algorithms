@@ -2,26 +2,31 @@ package datastructure;
 
 public class Queue {
 
-	Node queue;
+	Node queue;  //the data structure
 	
-	Node head;
+	Node head;  //the pointer to head
 	
 	
 	public void insert (Object val){
 		if (queue==null) {
 			queue = new Node(val);
 			head = queue;
+		} else  {
+			Node next = new Node(val);
+			queue.next = next;
+			queue = queue.next; 
 		}
-		
-		Node next = new Node(val);
-		queue.next = next;
-		queue = queue.next;
 	}
 	
 	public Node pop(){
 		
 		Node node = head;
-		if (head!=null)head = head.next;
+		if (head !=null) {
+			if (head == queue) {
+				queue = queue.next;
+			}
+			head=head.next;
+		}
 		
 		return node;
 	}

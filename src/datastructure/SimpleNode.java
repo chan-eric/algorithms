@@ -6,7 +6,7 @@ public class SimpleNode {
 	public int val;
 	
 	public SimpleNode(int i) {
-		// TODO Auto-generated constructor stub
+		val = i;
 	}
 
 }
