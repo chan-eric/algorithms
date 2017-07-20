@@ -14,25 +14,7 @@ public class IsTreeBalanced {
 
 	public static void main(String[] args) {
 
-
-		TreeNode a = new TreeNode(10);
-		TreeNode b = new TreeNode(9);
-		TreeNode c = new TreeNode(12);
-		TreeNode d = new TreeNode(11);
-		TreeNode e = new TreeNode(1);
-		TreeNode f = new TreeNode(6);
-		TreeNode g = new TreeNode(3);
-		
-		//Test case 1 balanced
-		a.left=b;
-		a.right=c;
-		b.left=d;
-		c.right=e;
-		d.right=f;
-		e.left=g;
-		
-		
-		System.out.println(isBalanced(a));
+		System.out.println(isBalanced(TreeTestCases.treeTest0()));
 		
 	}
 	

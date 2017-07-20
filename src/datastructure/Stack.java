@@ -5,6 +5,7 @@ public class Stack {
 	Node top;
 
 	public void push(Object o) {
+		if (o==null) return;
 		if (top == null) {
 			top = new Node(o);
 			top = top;
