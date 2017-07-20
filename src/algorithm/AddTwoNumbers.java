@@ -3,7 +3,7 @@ package algorithm;
 import datastructure.SimpleNode;
 
 /**TODO inefficient way of adding two linkedList*/
-public class Test {
+public class AddTwoNumbers {
 
 	public static void main(String[] args) {
 

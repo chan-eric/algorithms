@@ -2,7 +2,7 @@ package algorithm;
 
 import datastructure.Node;
 
-public class AddTwoNumber {
+public class LinkedListTest {
 	
 
 	public static void main(String[] args) {
