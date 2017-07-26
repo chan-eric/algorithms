@@ -1,6 +1,5 @@
 package algorithm;
 
-import datastructure.Node;
 import datastructure.Queue;
 import datastructure.TreeNode;
 
