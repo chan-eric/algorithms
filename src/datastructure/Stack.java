@@ -24,7 +24,7 @@ public class Stack {
 		if (peak() != null) {
 			Node result = top;
 			top = top.next;
-			return result.next;
+			return result.next.value;
 		}
 		
 		return null;
